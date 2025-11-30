@@ -16,57 +16,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#dddedf] min-h-screen max-w-lg mx-auto mt-8 ">
+<body class="min-h-screen max-w-lg mx-auto mt-8 outfit-font">
+    <!--header starts here-->
     <div class="flex justify-between items-center border-b-2 border-gray-300 p-2">
         <div class="flex gap-4">
             <img class="h-[50px]" src="./assets/Group.png">
             <div>
-                <h1 class="font-bold"> $ <span>45000</span></h1>
+                <h1 class="font-bold"> $ <span id="available-balance">45000</span></h1>
                 <p class="text-[#08080880]"> Available Balance</p>
             </div>
         </div>
         <div> 
-            <button class="btn text-[#08080880] font-bold"> <i class="fa-solid fa-right-from-bracket rotate-180"></i> Default</button>
+            <button class="btn text-[#08080880] font-bold"> <i class="fa-solid fa-right-from-bracket rotate-180"></i> Logout </button>
         </div>
     </div>
-
+    <!--cards starts here-->
     <div class="mt-4">
-        <h1 class="text-[24px] text-center outfit-font">🔥 Welcome to Payooo!</h1>
-        <p class="text-[#08080880] outfit-font p-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        <h1 class="text-[24px] text-center">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880] p-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
     </div>
 
     <div class="grid grid-cols-3 gap-4 p-4 min-h-[200px]">
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/purse1.png">
                 <p>Add Money</p>
         </div>
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/send1.png" alt="">
                 <p>CashOut</p>
-            </img>
         </div>
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/money1.png" alt="">
                 <p>Transfer Money</p>
             </img>
         </div>
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/bonus1.png" alt="">
                 <p>Get Bonus</p>
             </img>
         </div>
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/wallet1.png" alt="">
                 <p>Pay Bill</p>
             </img>
         </div>
-        <div class="text-center text-[#08080880] outfit-font bg-white rounded-lg">
+        <div class="text-center text-[#08080880]  bg-white rounded-lg">
             <img class="mx-auto my-2" src="./assets/transaction1.png" alt="">
                 <p>Transaction</p>
             </img>
         </div>
     </div>
     
+    <!--Add Money starts here-->
+    <div class="bg-[#F4F5F7] min-h-screen max-w-lg mx-auto ">
+        <h1 class="mt-10 px-8 text-[20px]">Add Money</h1>
+        <form class="border border-gray-100 p-8">
+            <div class="">
+                <label class=""> Select a Bank</label> <br>
+                <select id="bank-name" class="select select-ghost mt-4 w-full rounded-xl bg-white border border-gray-300">
+                    <option >Select Bank Name</option>
+                    <option>DNB</option>
+                    <option>SpareBank1</option>
+                    <option>Nordea</option>
+                </select>
+            </div>
+
+            <div class="mt-4">
+                <label class="">Bank Account Number</label> <br>
+                <input type="Text" id="Account-number" class="input mt-4 w-full rounded-xl" placeholder="Enter 11 digit account number" />
+            </div>
+
+            <div class="mt-4">
+                <label class="">Amount to Add</label> <br>
+                <input type="Text" id="Amount" class="input mt-4 w-full rounded-xl" placeholder="Add amount to withdraw" />
+            </div>
+
+            <div  class="mt-4">
+                <label class="">Pin Number</label> <br>
+                <input type="password" id="pin" class="input mt-4 w-full rounded-xl" placeholder="Enter 4 digit pin number" />
+            </div>
+
+            <button id="add-money-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Add Money</button>
+            
+        </form>
+    </div>
+
+    <!--Javascript file-->
+    <script src="home.js"></script>
 </body>
 
 </html>
