@@ -9,14 +9,24 @@
     <!--tailwind cdn-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <main>
-        <form>
-            <div>
-                
-            </div>
-        </form>
-    </main>
-</body>
+<body class="bg-[#f4f5f7] flex flex-col items-center justify-center min-h-screen rounded-md">
 
+    <div class="h-[130px] w-[300px] bg-[url(./assets/bg.png)] flex justify-center items-center bg-cover ">
+        <img src="./assets/Group.png">
+    </div>    
+        <form class=" w-[350px] bg-white">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            
+            <label class="label text-xl font-bold text-black">Mobile Number</label>
+            <input type="Text" id="mobile-number" class="input" placeholder="Enter Your Mobile Number" />
+
+            <label class="label text-xl font-bold text-black">4 Digit Pin</label>
+            <input type="password" id="pin-number" class="input" placeholder="Enter 4 digit Pin" />
+
+            <button id="login-btn" class="btn bg-[#0874F2] mt-4 rounded-md text-white">Login</button>
+            </fieldset>
+        </form>
+       <!--javascript file added--> 
+  <script src="script.js"></script>      
+</body>
 </html>
