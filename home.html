@@ -68,7 +68,7 @@
     </div>
     
     <!--Add Money starts here-->
-    <div class="bg-[#F4F5F7] min-h-screen max-w-lg mx-auto ">
+    <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto ">
         <h1 class="mt-10 px-8 text-[20px]">Add Money</h1>
         <form class="border border-gray-100 p-8">
             <div class="">
@@ -99,6 +99,113 @@
             <button id="add-money-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Add Money</button>
             
         </form>
+    </div>
+
+
+    <!--Cash Out starts-->
+    <div class="bg-[#F4F5F7] from min-h-screen max-w-lg mx-auto hidden">
+        <h1 class="mt-4 px-8 text-[20px]">Cash Out</h1>
+        <form class="border border-gray-100 p-8">
+            <div class="mt-4">
+                <label class="">Agent Number</label> <br>
+                <input type="Text" id="Agent-number" class="input mt-4 w-full rounded-xl" placeholder="Enter 11 digit number" />
+            </div>
+
+            <div class="mt-4">
+                <label class="">Amount</label> <br>
+                <input type="Text" id="Cash_out-amount" class="input mt-4 w-full rounded-xl" placeholder="Enter amount to withdraw" />
+            </div>
+
+            <div  class="mt-4">
+                <label class="">Pin Number</label> <br>
+                <input type="password" id="pin-code" class="input mt-4 w-full rounded-xl" placeholder="Enter 4 digit pin number" />
+            </div>
+
+            <button id="withdraw-money-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Withdraw Money</button>
+            
+        </form>
+    </div>
+
+    <!--Transfer Money starts-->
+    <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto hidden ">
+        <h1 class="mt-10 px-8 text-[20px]">Transfer Money</h1>
+        <form class="border border-gray-100 p-8">
+            <div class="mt-4">
+                <label class="">User Account Number</label> <br>
+                <input type="Text" id="reciver-account-number" class="input mt-4 w-full rounded-xl" placeholder="Enter 11 digit number" />
+            </div>
+
+            <div class="mt-4">
+                <label class="">Amount</label> <br>
+                <input type="Text" id="transfer-amount" class="input mt-4 w-full rounded-xl" placeholder="Enter amount to transfer" />
+            </div>
+
+            <div  class="mt-4">
+                <label class="">Pin Number</label> <br>
+                <input type="password" id="transfer-money-pin" class="input mt-4 w-full rounded-xl" placeholder="Enter 4 digit pin number" />
+            </div>
+
+            <button id="transfer-money-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Send Money</button>
+            
+        </form>
+    </div>
+
+    <!--Get Bonus Starts-->
+     <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto">
+        <h1 class="mt-10 px-8 text-[20px]">Get Bonus</h1>
+        <form class="border border-gray-100 p-8">
+            <div class="mt-4">
+                <label class="">Enter Bonus Coupn</label> <br>
+                <input type="Text" id="coupon-number" class="input mt-4 w-full rounded-xl" placeholder="Enter your coupon" />
+            </div>
+
+            <button id="get-bonus-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Get Bonus</button>
+            
+        </form>
+    </div>
+
+
+    <!--Pay Bill starts-->
+     <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto hidden">
+        <h1 class="mt-10 px-8 text-[20px]">Pay Bill</h1>
+        <form class="border border-gray-100 p-8">
+            <form class="border border-gray-100 p-8">
+            <div class="">
+                <label class=""> Select to Pay</label> <br>
+                <select id="pay-bill-bank-name" class="select select-ghost mt-4 w-full rounded-xl bg-white border border-gray-300">
+                    <option >Select Bank</option>
+                    <option>DNB</option>
+                    <option>SpareBank1</option>
+                    <option>Nordea</option>
+                </select>
+            </div>
+            <div class="mt-4">
+                <label class="">Biller Account Number</label> <br>
+                <input type="Text" id="biller-account-number" class="input mt-4 w-full rounded-xl" placeholder="Enter acount number" />
+            </div>
+
+            <div class="mt-4">
+                <label class="">Amount to pay</label> <br>
+                <input type="Text" id="pay-amount" class="input mt-4 w-full rounded-xl" placeholder="Add amount to pay" />
+            </div>
+
+            <div  class="mt-4">
+                <label class="">Pin Number</label> <br>
+                <input type="password" id="pay-bill-pin" class="input mt-4 w-full rounded-xl" placeholder="Enter 4 digit pin number" />
+            </div>
+
+            <button id="pay-now-btn" class="btn bg-[#0874F2] mt-4 rounded-xl text-white w-full"> Pay Now</button>
+            
+        </form>
+    </div>
+
+    <!--Transaction History Starts-->
+    <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto hidden">
+        <h1 class="mt-10 px-8 text-[20px]">Transaction History</h1>
+    </div>
+    <!--Latest Payment Starts-->
+    <div class="bg-[#F4F5F7] form min-h-screen max-w-lg mx-auto hidden">
+        <h1 class="mt-10 px-8 text-[20px]"> Latest Payment</h1>
     </div>
 
     <!--Javascript file-->
