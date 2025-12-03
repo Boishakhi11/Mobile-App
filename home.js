@@ -1,7 +1,17 @@
 const pinNumber = 1234;
 
-/*add money*/
 
+
+//function to toggle 
+ function handleToggle(id) {
+  const forms = document.getElementsByClassName('form');
+   for (const form of forms) {
+    form.style.display = "none";
+   }
+    document.getElementById(id).style.display = "block";
+ }
+
+//add money 
 document.getElementById('add-money-btn')
 .addEventListener('click', function(e) {
     e.preventDefault()
@@ -30,7 +40,7 @@ document.getElementById('add-money-btn')
 })
 
 
-/*cash out*/
+//cash out
 document.getElementById('withdraw-money-btn')
 .addEventListener('click', function(e) {
     e.preventDefault()
@@ -55,8 +65,37 @@ document.getElementById('withdraw-money-btn')
 })
 
 
-const forms = document.getElementsByClassName('form');
+document.getElementById('add-money-toggole')
+.addEventListener('click', function() {
+   handleToggle("add-moeny-form");
+})
 
-for ( const form of forms) {
-    console.log(form);
-}
+document.getElementById('cash-out-toggole')
+.addEventListener('click', function(){
+    handleToggle('cash-out-form');
+})
+
+document.getElementById('transfer-money-toggole')
+.addEventListener('click', function(){
+    handleToggle('transfer-money-form');
+})
+
+document.getElementById('get-bonus-toggole')
+.addEventListener('click', function(){
+    handleToggle('get-bonus-form');
+})
+
+document.getElementById('pay-bill-toogole')
+.addEventListener('click', function(){
+    handleToggle('pay-bill-form');
+})
+
+document.getElementById('transaction-toggole')
+.addEventListener('click', function(){
+    handleToggle('latest-payment-form');
+})
+
+
+
+
+
