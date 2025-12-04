@@ -27,7 +27,7 @@
             </div>
         </div>
         <div> 
-            <button class="btn text-[#08080880] font-bold"> <i class="fa-solid fa-right-from-bracket rotate-180"></i> Logout </button>
+            <button id="logout" class="btn text-[#08080880] font-bold"> <i class="fa-solid fa-right-from-bracket rotate-180"></i> Logout </button>
         </div>
     </div>
     <!--cards starts here-->
@@ -41,25 +41,30 @@
             <img class="mx-auto my-2" src="./assets/purse1.png">
                 <p>Add Money</p>
         </div>
+
         <div id="cash-out-toggole" class=" toggoleBtn text-center text-[#08080880]  bg-white rounded-lg border border-gray-400 shadow-lg cursor-pointer hover:bg-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-110">
             <img class="mx-auto my-2" src="./assets/send1.png" alt="">
                 <p>CashOut</p>
         </div>
+
         <div id="transfer-money-toggole" class=" toggoleBtn text-center text-[#08080880]  bg-white rounded-lg border border-gray-400 shadow-lg cursor-pointer hover:bg-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-110">
             <img class="mx-auto my-2" src="./assets/money1.png" alt="">
                 <p>Transfer Money</p>
             </img>
         </div>
+
         <div id="get-bonus-toggole" class=" toggoleBtn text-center text-[#08080880]  bg-white rounded-lg border border-gray-400 shadow-lg cursor-pointer hover:bg-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-110">
             <img class="mx-auto my-2" src="./assets/bonus1.png" alt="">
                 <p>Get Bonus</p>
             </img>
         </div>
+
         <div id="pay-bill-toogole" class=" toggoleBtn text-center text-[#08080880]  bg-white rounded-lg border border-gray-400 shadow-lg cursor-pointer hover:bg-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-110">
             <img class="mx-auto my-2" src="./assets/wallet1.png" alt="">
                 <p>Pay Bill</p>
             </img>
         </div>
+
         <div id="transaction-toggole" class=" toggoleBtn text-center text-[#08080880]  bg-white rounded-lg border border-gray-400 shadow-lg cursor-pointer hover:bg-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-110">
             <img class="mx-auto my-2" src="./assets/transaction1.png" alt="">
                 <p>Transaction</p>
@@ -70,7 +75,7 @@
     <!--Add Money starts here-->
     <div id="add-moeny-form"  class="bg-[#F4F5F7] form max-w-lg mx-auto ">
         <h1 class="mt-10 px-8 text-[20px]">Add Money</h1>
-        <form class="border border-gray-100 p-8">
+        <form id="add-money-form-container" class="border border-gray-100 p-8">
             <div class="">
                 <label class=""> Select a Bank</label> <br>
                 <select id="bank-name" class="select select-ghost mt-4 w-full rounded-xl bg-white border border-gray-300">
@@ -105,7 +110,7 @@
     <!--Cash Out starts-->
     <div id="cash-out-form" class="bg-[#F4F5F7] form max-w-lg mx-auto hidden">
         <h1 class="mt-4 px-8 text-[20px]">Cash Out</h1>
-        <form class="border border-gray-100 p-8">
+        <form id="cash-out-form-container" class="border border-gray-100 p-8">
             <div class="mt-4">
                 <label class="">Agent Number</label> <br>
                 <input type="Text" id="Agent-number" class="input mt-4 w-full rounded-xl" placeholder="Enter 11 digit number" />
@@ -129,7 +134,7 @@
     <!--Transfer Money starts-->
     <div id="transfer-money-form" class="bg-[#F4F5F7] form max-w-lg mx-auto hidden ">
         <h1 class="mt-10 px-8 text-[20px]">Transfer Money</h1>
-        <form class="border border-gray-100 p-8">
+        <form id="transfer-money-form-container" class="border border-gray-100 p-8">
             <div class="mt-4">
                 <label class="">User Account Number</label> <br>
                 <input type="Text" id="reciver-account-number" class="input mt-4 w-full rounded-xl" placeholder="Enter 11 digit number" />
@@ -168,7 +173,7 @@
     <!--Pay Bill starts-->
      <div id="pay-bill-form" class="bg-[#F4F5F7] form max-w-lg mx-auto hidden">
         <h1 class="mt-10 px-8 text-[20px]">Pay Bill</h1>
-            <form class="border border-gray-100 p-8">
+            <form id="pay-bill-form-container" class="border border-gray-100 p-8">
                 <div class="">
                     <label class=""> Select to Pay</label> <br>
                         <select id="pay-bill-bank-name" class="select select-ghost mt-4 w-full rounded-xl bg-white border border-gray-300">
@@ -200,9 +205,18 @@
     </div>
 
     <!--Transaction History Starts-->
-    <div id="transaction-history-form" class="bg-[#F4F5F7] form max-w-lg mx-auto hidden">
-        <h1 class="mt-10 px-8 text-[20px]">Transaction History</h1>
-    </div>
+    <div id="transaction-history-form" class="form bg-[#F4F5F7] max-w-lg mx-auto p-4 hidden">
+        <div class="flex justify-between item-center">
+            <h1 class="text-lg">Transaction History</h1>
+            <p class="text-[#08080880]">View All</p>
+        </div>
+    
+        <div id="transaction-history">
+
+        </div>
+
+
+
     <!--Latest Payment Starts-->
     <div id="latest-payment-form" class="bg-[#F4F5F7] form  max-w-lg mx-auto hidden">
         <h1 class="mt-10 px-8 text-[20px]"> Latest Payment</h1>
